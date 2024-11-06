@@ -38,9 +38,11 @@ h1 {
 
 .start {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     justify-content: center;
     align-items: center;
-    margin-top: 50vh;
+    height: 100vh;
 }
 
 .startbutton {
@@ -80,6 +82,5 @@ h1 {
         top: 0;
         left: 0;
         z-index: -1;
-        display:block
     }
 }; 
