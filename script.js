@@ -8,3 +8,31 @@ function toggle() {
     nextbutton.classList.add("fadein");
     nextbutton.style.display = 'block';
 }
+
+let index = 1;
+show(index);
+
+// Next/previous controls
+function plus(n) {
+    show(index += n);
+}
+
+// Thumbnail image controls
+function currentChar(n) {
+  show(index = n);
+}
+
+function show(n) {
+    let i;
+    let chars = document.getElementsByClassName("chars");
+    if (n > chars.length) {
+        index = 1;
+    }
+    if (n < 1) {
+        index = chars.length;
+    }
+    for (i = 0; i < chars.length; i++) {
+        chars[i].style.display = "none";
+    }
+    chars[index-1].style.display = "block";
+}
