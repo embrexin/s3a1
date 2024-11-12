@@ -36,3 +36,14 @@ function show(n) {
     }
     chars[index-1].style.display = "flex";
 }
+
+function showChars() {
+    var introtext = document.getElementById("introtext");
+    var text = document.getElementById("hidden");
+    var button = document.getElementById("start");
+    var nextbutton = document.getElementById("nextbutton");
+    button.style.display = 'none';
+    nextbutton.style.display = 'none';
+    introtext.style.display = 'none';
+    text.style.display = 'flex';
+}

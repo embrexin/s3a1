@@ -134,6 +134,10 @@ h1 {
     opacity: 1;
 }
 
+#hidden {
+    display: none;
+}
+
 .box {
     display: flex;
     flex-direction: column;
