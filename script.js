@@ -24,9 +24,9 @@ function currentChar(n) {
 
 function show(n) {
     let i;
-    let chars = document.getElementsByClassName("chars");
+    let chars = document.getElementsByClassName("character");
     if (n > chars.length) {
-        index = 1;
+        index = chars.length;
     }
     if (n < 1) {
         index = chars.length;
@@ -34,5 +34,5 @@ function show(n) {
     for (i = 0; i < chars.length; i++) {
         chars[i].style.display = "none";
     }
-    chars[index-1].style.display = "block";
+    chars[index-1].style.display = "flex";
 }

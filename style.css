@@ -110,7 +110,7 @@ h1 {
     flex-direction: column;
     padding: 5vw;
     background: rgba(0, 0, 0, 0.7);
-    width: 70vw;
+    width: 60vw;
     height: 50vh;
     justify-content: stretch;
     position: relative;
@@ -146,34 +146,27 @@ h1 {
 }
 
 .character {
-    display: flex;
+    display: none;
     font-family: "Goudy Bookletter 1911", serif;
     color: white;
-    font-size: clamp(0.7rem, 3vw, 1.5rem); 
+    font-size: clamp(0.5rem, 2vw, 1.5rem); 
     font-weight: 200;
     text-align: left;
     opacity: 1;
     width: inherit;
     height: inherit;
-    justify-content: space-around;
 }
 
 .character img {
     display: flex;
     object-fit: contain;
-    max-width: 80%;
-    max-height: 80%;
-}
-
-.characterprofile {
-    display: flex;
-    opacity: 1;
+    height: 90%;
 }
 
 .charactertext {
     display: flex;
+    position: relative;
     flex-direction: column;
-    margin-top: 2rem;
 }
 
 .charactertext h1 {
