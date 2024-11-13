@@ -25,16 +25,38 @@ function currentChar(n) {
 function show(n) {
     let i;
     let chars = document.getElementsByClassName("character");
+
+    if (n > chars.length) {
+        var box = document.getElementsByClassName("box");
+        box[0].style.display = 'none';
+        var replay = document.getElementById("replay");
+        replay.style.display = 'block';
+    }
+
     if (n > chars.length) {
         index = chars.length;
     }
+
     if (n < 1) {
         index = chars.length;
     }
+
     for (i = 0; i < chars.length; i++) {
         chars[i].style.display = "none";
     }
+
     chars[index-1].style.display = "flex";
+
+    if (index >= 6) {
+        var heading = document.getElementById("cast");
+        heading.style.display = 'none';
+        var story = document.getElementById("story");
+        story.style.display = 'flex';
+    }
+
+    if (index == 43 || index == 44 || index == 45) {
+        index = 45;
+    }
 }
 
 function showChars() {
@@ -46,4 +68,19 @@ function showChars() {
     nextbutton.style.display = 'none';
     introtext.style.display = 'none';
     text.style.display = 'flex';
+}
+
+function chooseElena() {
+    index = 42;
+    plus(1);
+}
+
+function chooseLiam() {
+    index = 43;
+    plus(1);
+}
+
+function chooseArthur() {
+    index = 44;
+    plus(1);
 }
