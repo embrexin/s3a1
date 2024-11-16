@@ -25,6 +25,8 @@ function currentChar(n) {
 function show(n) {
     let i;
     let chars = document.getElementsByClassName("character");
+    var arrow = document.getElementById("arrow");
+    arrow.style.display = 'flex';
 
     if (n > chars.length) {
         var box = document.getElementsByClassName("box");
@@ -54,6 +56,10 @@ function show(n) {
         story.style.display = 'flex';
     }
 
+    if (index == 42) {
+        arrow.style.display = 'none';
+    }
+
     if (index == 43 || index == 44 || index == 45) {
         index = 45;
     }
@@ -71,16 +77,16 @@ function showChars() {
 }
 
 function chooseElena() {
-    index = 42;
-    plus(1);
+    index = 43;
+    show(43);
 }
 
 function chooseLiam() {
-    index = 43;
-    plus(1);
+    index = 44;
+    show(44);
 }
 
 function chooseArthur() {
-    index = 44;
-    plus(1);
+    index = 45;
+    show(45);
 }
